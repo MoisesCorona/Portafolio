@@ -5,7 +5,7 @@ const navMenu = document.getElementById("nav-menu"),
       navClose = document.getElementById("nav-close")
 
 
-/* Mostar Menu */
+/* ======================== Mostar Menu  ============================= */
 if(navToggle){
     navToggle.addEventListener('click', () => {
        navMenu.classList.add('show-menu')
@@ -21,6 +21,7 @@ if(navClose) {
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
+
 const navLink = document.querySelectorAll('.nav--link')
 
 const linkAction = () =>{
@@ -33,7 +34,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 
-/*                          Send             Emial             */
+/*             ========================== Send  E-mail =======================        */
 
 
 const contactForm = document.getElementById('contact-form'),
@@ -78,7 +79,7 @@ const sendEmail = (e) =>{
 contactForm.addEventListener('submit', sendEmail);
 
 
-/*   Scroll Sections Activate link */
+/*   ========================= Scroll Sections Activate link ===================================== */
 
 const sections = document.querySelectorAll('section[id]')
     
@@ -102,7 +103,7 @@ window.addEventListener('scroll', scrollActive)
 
 
 
-/*                       Mostar Scroll up                 */
+/*      ==========================   Mostar Scroll up  ==============================     */
 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
@@ -172,7 +173,7 @@ const sr = ScrollReveal({
   // reset: true /* Animations repeat */
 })
 
-sr.reveal(`.home--data, .home--title, .home--social, projects--container, .testimonial--container, .footer--container`)
+sr.reveal(`.home--data, .home--title, .home--social, projects--container, .testimonial--container, .footer--container, .projects--container`)
 sr.reveal(`.home--info div`, {delay: 700, origin: 'bottom', interval: 100})
 sr.reveal(`.skills--content:nth-child(1), .contact--content:nth-child(1)`, {origin: 'left'})
 sr.reveal(`.skills--content:nth-child(2), .contact--content:nth-child(2)` , {origin: 'right'})
@@ -187,6 +188,13 @@ sr.reveal(`.qualification--content, .services--card`, {interval: 200})
 const swiper = new Swiper(".projects--container",{
    loop: true,
    spaceBetween: 24,
+    centeredSlides: true,
+    slidesPerView: 1.3, // Muestra una parte de los lados
+    spaceBetween: 30, // Separación entre slides
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
    
    navigation:{
      nextEl: ".swiper-button-next",
@@ -194,4 +202,11 @@ const swiper = new Swiper(".projects--container",{
    },
    mousewheel: true,
    keyboard: true,
+
+   breakpoints: {
+      1200: {
+        slidesPerView: 1.7, // Más espacio en laptops
+        spaceBetween: 50,
+      },
+    },
 });
