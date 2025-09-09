@@ -558,7 +558,7 @@ body.dark-theme{
   }
 }
 
-/*  Qulaficaion */
+/* ====================================  Qulaficaion ====================================== */
 
 .qualification{
   position: relative;
@@ -622,8 +622,8 @@ body.dark-theme{
 
 .services--card{
   position: relative;
-  width: 228px;
-  height: 320px;
+  width: 270px;
+  height: 390px;
   background-color: var(--container-color);
   text-align: center;
   padding: 3.5rem 1rem;
