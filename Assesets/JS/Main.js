@@ -183,14 +183,14 @@ sr.reveal(`.qualification--content, .services--card`, {interval: 200})
 
 
 
-/*swiper*/ /* el maestro Andre Yorchs Jardine Romero */                             
+/*swiper */                             
 
 const swiper = new Swiper(".projects--container",{
    loop: true,
    spaceBetween: 24,
     centeredSlides: true,
     slidesPerView: 1.3, // Muestra una parte de los lados
-    spaceBetween: 30, // Separación entre slides
+    spaceBetween: 60, // Separación entre slides
     pagination: {
     el: ".swiper-pagination",
     clickable: true,

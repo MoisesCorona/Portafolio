@@ -167,6 +167,9 @@ body.dark-theme{
   color: var(--text-color-light);
 }
 
+.dark-theme .services--description{
+  color: var(--text-color-light);
+}
 
 
 .dark-theme .section--border{
@@ -734,29 +737,16 @@ body.dark-theme{
   transform: translateX(0.25rem);
 }
 
+
 .swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none;
+.swiper-button-next::after{
+  content: none !important;
 }
 
-.custom-swiper-btn {
-  width: 40px;
-  height: 40px;
-  backdrop-filter: blur(5px); /* borroso */
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: backdrop-filter 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.swiper-button-next,
+.swiper-button-prev{
+    position: absolute;
+    
 }
 
 .custom-swiper-btn i {
@@ -765,19 +755,15 @@ body.dark-theme{
 
 /* Posiciones */
 .swiper-button-prev.custom-swiper-btn {
-  left: 20px;
+  left: 15px;
 }
 .swiper-button-next.custom-swiper-btn {
-  right: 20px;
+  right: 15px;
 }
 
 /* Efecto hover */
-.custom-swiper-btn:hover {
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.5);
-  transform: translateY(-50%) scale(1.1);
-}
+
+
 
  /* Paginación tipo líneas blancas */
   .swiper-pagination {
@@ -1400,7 +1386,7 @@ body.dark-theme{
         font-size: 2.5rem;
     }
 
-    .services--border{
+.services--border{
         width: 265px;
         height: 365px;
         border-radius: 8.25rem;
@@ -1408,12 +1394,12 @@ body.dark-theme{
 
   
 
-    .projects--container {
+.projects--container {
     overflow: visible;
     padding: 0 600px;
   }
 
-   .projects--content {
+.projects--content {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -1512,9 +1498,6 @@ body.dark-theme{
      background: linear-gradient(90deg, #0f2027, #2c5364, #00c9ff, #00d2ff, #6dd5ed) !important;
    }
 
-
-
-    
 
     .testimonial--container{
         width: 560px;
